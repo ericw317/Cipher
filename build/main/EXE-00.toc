@@ -92,7 +92,7 @@
  [],
  False,
  False,
- 1707874815,
+ 1707878915,
  [('run.exe',
    'C:\\Users\\ericw\\PycharmProjects\\Cipher\\.venv\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],
