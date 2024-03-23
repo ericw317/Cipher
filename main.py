@@ -5,6 +5,8 @@ from columnar_transposition_cipher import ColumnarTransposition
 from vigenere_cipher import VigenereCipher
 from playfair_cipher import PlayfairCipher
 from vernam_cipher import VernamCipher
+from atbash_cipher import AtbashCipher
+from rail_fence_cipher import RailFenceCipher
 
 program = True
 
@@ -40,10 +42,12 @@ while program:
                           "4) Columnar Transposition Cipher\n"
                           "5) Vigenere Cipher\n"
                           "6) Playfair Cipher\n"
-                          "7) Vernam Cipher / OTP\n")
+                          "7) Vernam Cipher / OTP\n"
+                          "8) Atbash Cipher\n"
+                          "9) Rail Fence Cipher\n")
         # input validation
-        while not selection.isnumeric() or selection < "1" or selection > "7":
-            selection = input("Input must be a number between 1 and 7: ")
+        while not selection.isnumeric() or selection < "1" or selection > "9":
+            selection = input("Input must be a number between 1 and 9: ")
         if selection == "1":
             RotationCipher.encrypt()
         elif selection == "2":
@@ -58,6 +62,10 @@ while program:
             PlayfairCipher.encrypt()
         elif selection == "7":
             VernamCipher.encrypt()
+        elif selection == "8":
+            AtbashCipher.encrypt()
+        elif selection == "9":
+            RailFenceCipher.encrypt()
 
     elif decrypt:
         selection = input("Which cipher would you like to decrypt?\n"
@@ -67,11 +75,13 @@ while program:
                           "4) Columnar Transposition Cipher\n"
                           "5) Vigenere Cipher\n"
                           "6) Playfair Cipher\n"
-                          "7) Vernam Cipher / OTP\n")
+                          "7) Vernam Cipher / OTP\n"
+                          "8) Atbash Cipher\n"
+                          "9) Rail Fence Cipher\n")
 
         # input validation
-        while not selection.isnumeric() or selection < "1" or selection > "7":
-            selection = input("Input must be a number between 1 and 7: ")
+        while not selection.isnumeric() or selection < "1" or selection > "9":
+            selection = input("Input must be a number between 1 and 9: ")
         if selection == "1":
             RotationCipher.decrypt()
         elif selection == "2":
@@ -86,3 +96,7 @@ while program:
             PlayfairCipher.decrypt()
         elif selection == "7":
             VernamCipher.decrypt()
+        elif selection == "8":
+            AtbashCipher.decrypt()
+        elif selection == "9":
+            RailFenceCipher.decrypt()
