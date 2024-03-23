@@ -1,0 +1,3 @@
+Required installations are needed to run:
+pip install numpy
+pip install pycryptodome
